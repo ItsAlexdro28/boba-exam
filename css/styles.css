@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins';
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-color: #E8D9D6;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.big-info {
+    position: relative;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 35vw;
+    /* height: 32vw; */
+    margin: 10% 0;
+    padding: 3%;
+}
+
+.big-title {
+    font-size: 3em;
+}
+
+.big-pharagraph {
+    font-size: 1.5em;
+    padding: 0.4em 0 1.4em;
+}
+
+.big-button {
+    background-color: black;
+    padding: 0.8em 1.5em;
+    border-radius: 50px;
+}
+
+.big-button a {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 1);
+    font-size: 1.5em;
+}
+
+.tea {
+    position: relative;
+    /* justify-content: center;
+    align-items: center; */
+    display: flex;
+    width: 55vw;
+    height: auto;
+}
+
+.tea-background {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/images/shape\ bg.png);
+    top: 0%;
+    right: 0%;
+    width: 42vw;
+    height: 40vw;
+}
+
+.tea-blob {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/images/Group\ 48.png);
+    right: 4%;
+    top: 10vw;
+    width: 37vw;
+    height: 25vw;
+}
+
+.tea-cup {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/images/Group\ 49.png);
+    right: 20%;
+    top: 1vw;
+    width: 20vw;
+    height: 35vw;
+
+    animation: tea-idle 3s ease-in 0 infinite ;
+}
+
+.small-info {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%; 
+}
+
+.small-round-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #FFF;
+    padding: 1% 2% 1% 0%;
+    border-radius: 0px 100px 100px 0px ;
+}
+
+.small-round-img {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/images/unsplash_EgDkl00Hiqw.png);
+    height: 100%;
+    width: 3.6%;
+}
+
+
+
+@media (max-width:991px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .big-info {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tea {
+        width: 100%;
+        height: 100vw;
+        width: auto;
+    }
+    
+    .tea-background {
+        width: 100%;
+        height: 95vw;
+    }
+
+    .tea-blob {
+        right: 8%;
+        top: 30%;
+        width: 80vw;
+        height: 55vw;
+    }
+
+    .tea-cup {
+        right: 20%;
+        top: 10%;
+        width: 55vw;
+        height: 75vw;
+    }
+
+    .small-info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%; 
+    }
+    
+}
+
+@keyframes tea-idle {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: 1000px;
+    }
+
+    100% {
+        top: 0px;
+    }
+    
+}
+
