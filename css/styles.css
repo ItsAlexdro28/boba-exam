@@ -26,7 +26,7 @@ body {
     align-items: flex-start;
     width: 35vw;
     /* height: 32vw; */
-    margin: 10% 0;
+    margin: 9% 0;
     padding: 3%;
 }
 
@@ -96,7 +96,7 @@ body {
     width: 20vw;
     height: 35vw;
 
-    animation: tea-idle 3s ease-in 0 infinite ;
+    animation: tea-idle 3s ease-in-out infinite normal both;
 }
 
 .small-info {
@@ -108,24 +108,98 @@ body {
 
 .small-round-container {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
     background-color: #FFF;
-    padding: 1% 2% 1% 0%;
-    border-radius: 0px 100px 100px 0px ;
+    width: 30vw;
+    border-radius: 80px 100px 100px 80px ;
+}
+
+.small-box-image{
+    align-self: flex-start;
+    width: 100px;
+    height: 100%;
+}
+
+
+.small-round-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: stretch;
+    width: 31%;
+    height: 100%;
+    background: rgb(255,255,255);
+    border-radius: 80px 100px 100px 80px / 80px 100px 100px 80px;
+
 }
 
 .small-round-img {
-    position: absolute;
-    background-position: center;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-image: url(/images/unsplash_EgDkl00Hiqw.png);
+    border-radius: 50% / 30%;
+    width: 20%;
     height: 100%;
-    width: 3.6%;
+    margin-left: 0%;
 }
 
+.first-img {
+    background-image: url(/images/unsplash_FO3XO4JQtlo.png);
+}
 
+.second-img {
+    background-image: url(/images/unsplash_EgDkl00Hiqw.png);
+}
+
+.third-img {
+    background-image: url(/images/unsplash_FO3XO49898.png);
+}
+
+.small-subtitle  {
+    margin: 2% 0%;
+    font-size: 2.5em;
+    width: 10%;
+}
+
+.small-subpharagraph {
+    display: flex;
+    width: 50%;
+    margin: 3% 0%;
+    font-size: 1em; 
+}
+
+.small-round-container:hover {
+    background-color: black;
+    color: #FFF;
+    transform: scale(1.05);
+    filter: hue-rotate(360deg);
+    transition: 1s ease-in-out;
+}
+
+.big-info:hover {
+    transform: rotate(5deg);
+    filter: blur(5px);
+    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.tea-cup:hover {
+    transform: rotate3d(-1, -1, 0, -50deg);
+    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.boba-vector {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url(/images/boba\ tea\ illustration.png);
+    width: 9vw;
+    height: 20vh;
+    top: 70px;
+    left: 4vw;
+    z-index: 1;
+}
 
 @media (max-width:991px) {
     .container {
@@ -167,7 +241,25 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 90%; 
+        width: 100%; 
+    }
+
+    .small-round-container{
+        width: 90vw;
+        height: 30vw;
+        margin: 5% 5%;
+    }
+
+    .small-round-img {
+        height: 30vw;
+        width: 23vw;
+    }
+
+    .boba-vector {
+        width: 100px;
+        height: 150px;
+        top: 2px;
+        left: 20vw;
     }
     
 }
@@ -178,7 +270,7 @@ body {
     }
 
     50% {
-        top: 1000px;
+        top: 2vi;
     }
 
     100% {
